@@ -93,7 +93,7 @@
 
 /* Oflag values for open().  POSIX Table 6-4. */
 #define O_CREAT        00100	/* creat file if it doesn't exist */
-#define O_CREATI       00110    /* creat am immediate file it it doesn't exist */
+#define O_CREATI       03000    /* creat am immediate file it it doesn't exist */
 #define O_EXCL         00200	/* exclusive use flag */
 #define O_NOCTTY       00400	/* do not assign a controlling terminal */
 #define O_TRUNC        01000	/* truncate flag */

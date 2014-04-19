@@ -89,7 +89,15 @@ int do_open()
 	vname = (vir_bytes) job_m_in.name1;
 	vname_length = (size_t) job_m_in.name1_length;
 	r = fetch_name(vname, vname_length, fullpath);
-  } else {
+  } else if(open_mode & O_CREATI)
+	{printf("creati is called");
+	 vname = (vir_bytes) job_m_in.name1;
+        vname_length = (size_t) job_m_in.name1_length;
+        r = fetch_name(vname, vname_length, fullpath);
+
+}
+	
+ else {
 	vname = (vir_bytes) job_m_in.name;
 	vname_length = (size_t) job_m_in.name_length;
 	create_mode = 0;
